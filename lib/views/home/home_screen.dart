@@ -26,7 +26,8 @@ class _HomeScreenState extends State<HomeScreen> {
 //method of calling api
   Future<WeatherModel> GetData(String cityName) async {
     final response = await http.get(Uri.parse(
-        "https://api.openweathermap.org/data/2.5/weather?q=$cityName&appid=b7f66da2e4034cba548a39490cba747a"));
+        "https://api.openweathermap.org/data/2.5/weather?q=$cityName&appid=b*******************************"));
+    //https://api.openweathermap.org/data/2.5/weather?q=$cityName&appid=b7f66da2e4034cba548a39490cba747a
     var data = json.decode(response.body);
     //checking if city not found
     if (data['cod'] == "404") {
